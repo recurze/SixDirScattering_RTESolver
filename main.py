@@ -34,7 +34,7 @@ if __name__ == "__main__":
 
     relax_param_name = {
         "sgs": "omega",
-        "fixed_point": "relaxation",
+        "fp": "relaxation",
         "mgs": "omega",
     }
 
