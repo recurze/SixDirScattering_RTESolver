@@ -27,7 +27,7 @@ def visualize_2d(density: list[np.ndarray], plane: float, sigma: float):
     pcm = plot_heatmap(data[idx, :, :], axes[0], xlabel='y', ylabel='z')
     pcm = plot_heatmap(data[:, idx, :], axes[1], xlabel='x', ylabel='z')
     pcm = plot_heatmap(data[:, :, idx], axes[2], xlabel='x', ylabel='y')
-    #fig.colorbar(pcm, ax=axes.ravel().tolist())
+    fig.colorbar(pcm, ax=axes.ravel().tolist())
     subfig[0].suptitle(f"A on x={plane}, y={plane} and z={plane} for sigma={sigma}")
 
     data = density[1]
@@ -35,7 +35,7 @@ def visualize_2d(density: list[np.ndarray], plane: float, sigma: float):
     pcm = plot_heatmap(data[idx, :, :], axes[0], xlabel='y', ylabel='z')
     pcm = plot_heatmap(data[:, idx, :], axes[1], xlabel='x', ylabel='z')
     pcm = plot_heatmap(data[:, :, idx], axes[2], xlabel='x', ylabel='y')
-    #fig.colorbar(pcm, ax=axes.ravel().tolist())
+    fig.colorbar(pcm, ax=axes.ravel().tolist())
     subfig[1].suptitle(f"B on x={plane}, y={plane} and z={plane} for sigma={sigma}")
 
     data = sum(density)
@@ -43,7 +43,7 @@ def visualize_2d(density: list[np.ndarray], plane: float, sigma: float):
     pcm = plot_heatmap(data[idx, :, :], axes[0], xlabel='y', ylabel='z')
     pcm = plot_heatmap(data[:, idx, :], axes[1], xlabel='x', ylabel='z')
     pcm = plot_heatmap(data[:, :, idx], axes[2], xlabel='x', ylabel='y')
-    #fig.colorbar(pcm, ax=axes.ravel().tolist())
+    fig.colorbar(pcm, ax=axes.ravel().tolist())
     subfig[2].suptitle(f"Total intensity on x={plane}, y={plane} and z={plane} for sigma={sigma}")
 
 
